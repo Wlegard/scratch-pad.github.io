@@ -35,7 +35,22 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
+    /*
+    I: function greeter with hour as parameter
+    O: write a greeting program that prints a greeting to the screen like so: Good Morning!, Good Afternoon!, Good Evening!, Good Night!
+    C: Use if, else-if and else statement, test is case sensitive, use console.log ("Good Night!")
+    E: N/A
+    */
+   
+    if (hour >= 0 && hour < 11){
+        console.log ("Good Morning!")
+    }else if (hour >= 12 && hour < 16){
+        console.log ("Good Afternoon!");
+        }else if (hour >= 17 && hour < 21){
+            console.log ("Good Evening!");
+        }else {
+            console.log( "Good Night!");
+        }
     
     
     

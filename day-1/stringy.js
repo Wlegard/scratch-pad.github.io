@@ -107,10 +107,10 @@ function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 /*I: function length has two parameter named string and char
 O: return true if the String begins with the character, false otherwise
-C:  force lowercase or uppercase on string first character and char
+C:  force uppercase on string first character and char
 E: N/A
 */
-// create stringUpper and assign it to strig at firdt index and force uppercase
+// create stringUpper and assign it to string at first index and force uppercase
 var stringUpper = string[0].toUpperCase();
 // create variable charUpper to force uppercase
 var charUpper = char.toUpperCase();
@@ -162,7 +162,7 @@ function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     /*I: function length has two parameter named stringOne and stringTwo
     O: return the strings concatenated into one
-    C:N/A
+    C: plus operator
     E: N/A
     */
    // return two concatenated into one using + operator
@@ -187,7 +187,7 @@ function join(stringOne, stringTwo) {
 
      /*I: function length has two parameter named stringOne and stringTwo
     O: return the strings all joined together
-    C:N/A
+    C: use join method
     E: N/A
     */
    // return args joined without spaces

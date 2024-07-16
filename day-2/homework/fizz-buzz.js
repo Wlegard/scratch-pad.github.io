@@ -12,7 +12,12 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
-
+/* 
+I: function fizzBizz that prints 1 to 100
+O:
+C:
+E: N/A
+*/
 
 
     // YOUR CODE GOES ABOVE HERE //

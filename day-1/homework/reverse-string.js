@@ -22,7 +22,7 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     /*
-    I: function reverseString with parameter input
+    I: function reverseString with parameter input that"s a stirng
     O: return new string in reverse
     C: use for loop,access invidual characters, and concatenate strings
     E: N/A
