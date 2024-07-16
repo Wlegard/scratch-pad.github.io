@@ -17,6 +17,13 @@
 
 function length(string) {
     // YOUR CODE BELOW HERE //
+/*I: function length has one parameter named string
+O: return input string's length
+C: N/A
+E: N/A
+*/
+// return the string's length
+return string.length;
 
     
 
@@ -29,7 +36,13 @@ function length(string) {
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
    
-
+/*I: function length has one parameter named string
+O: return input string in lower case
+C: N/A
+E: N/A
+*/
+// return string in lowecase
+return string.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -38,8 +51,13 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+/*I: function length has one parameter named string
+O: return input string to uppercase
+C: N/A
+E: N/A
+*/
+//retun using uppercase method
+return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -59,6 +77,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+/*I: function length has one parameter named string
+O: return input string to using dash-case
+C: N/A
+E: N/A
+*/
+//return input string to using dash-case
+return string.
+
 
 
 
