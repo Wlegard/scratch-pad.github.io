@@ -19,7 +19,7 @@ function length(string) {
     // YOUR CODE BELOW HERE //
 /*I: function length has one parameter named string
 O: return input string's length
-C: N/A
+C: force lowercase
 E: N/A
 */
 // return the string's length
@@ -53,7 +53,7 @@ function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 /*I: function length has one parameter named string
 O: return input string to uppercase
-C: N/A
+C: force uppercase
 E: N/A
 */
 //retun using uppercase method
@@ -107,11 +107,15 @@ function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 /*I: function length has two parameter named string and char
 O: return true if the String begins with the character, false otherwise
-C:
+C:  force lowercase or uppercase on string first character and char
 E: N/A
 */
-
-
+// create stringUpper and assign it to strig at firdt index and force uppercase
+var stringUpper = string[0].toUpperCase();
+// create variable charUpper to force uppercase
+var charUpper = char.toUpperCase();
+// return stringUpper strictly compared to charUpper
+return stringUpper === charUpper;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -129,6 +133,20 @@ E: N/A
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
+/*I: function length has two parameter named string and char
+O: return true if the String ends with the character, false otherwise
+C:  force lowercase or uppercase on string last character and char
+E: N/A
+*/
+
+// create new variable for lastChar and assign it to string at last index with lowercase
+var lastChar = string[string.length - 1];
+// create new variable lowLastChar and assign to lastChar lowercase
+var lowLastChar = lastChar.toLowerCase();
+//create charLow variable and assign it to char to lowercse
+var charLow = char.toLowerCase();
+// return lowLastChar strictly compared to charLw
+return lowLastChar === charLow;
 
 
 
@@ -189,7 +207,23 @@ return args.join("");
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+/*I: function length has two parameters named stringOne and stringTwo
+    O: return the longest string
+    C: compare the length two strings
+    E: N/A
+    */
+   //create if statement comparing the lenght of stringOne and the length od stringTwo
+    if (stringOne.length >= stringTwo.length) {
+        // return stringOne if it's longer
+        return stringOne;
+      } else {
+     // return stringTwo if it's longer
+        return stringTwo;
+      }
+    
+    
+   
+    
 
     // YOUR CODE ABOVE HERE //
 }
@@ -201,11 +235,25 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+    /*I: function length has two parameters named stringOne and stringTwo
+    O:  return 1 if the first is higher in alphabetical order, return -1 if the second is higher, return 0 if equal.
+    C: compare strings using  greater than or less than operators
+    E: N/A
+    */
+   // create else if statement comparing stringOne and StringTwo
+if (stringOne > stringTwo){
+    // return -1 if stringOne is greater
+    return -1;
+} else if (stringOne < stringTwo){
+    //return 1 if string two is greater
+    return 1;
+} else{
+    //return 0 if both strings are equal
+return 0;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -219,7 +267,22 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+ /*I: function length has two parameters named stringOne and stringTwo
+    O:  return 1 if the first is lower in alphabetical order, return -1 if the second is lower, return 0 if equal.
+    C: compare strings using  greater than or less than operators
+    E: N/A
+    */
+   // create else if statement comparing stringOne and StringTwo
+   if (stringOne < stringTwo){
+    // return -1 if stringOne is lower
+    return -1;
+} else if (stringOne > stringTwo){
+    //return 1 if string two is great lower
+    return 1;
+} else{
+    //return 0 if both strings are equal
+return 0
+}
 
 
 
