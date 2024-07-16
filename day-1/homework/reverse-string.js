@@ -21,8 +21,12 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+    /*
+    I: function reverseStrinf with parameter input
+    O: return new string in reverse
+    C: use for loop,access invidual characters, and concatenate strings
+    E: N/A
+    */
     
     
     // YOUR CODE GOES ABOVE HERE //
