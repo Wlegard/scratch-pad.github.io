@@ -27,13 +27,13 @@ function reverseString(input) {
     C: use for loop,access invidual characters, and concatenate strings
     E: N/A
     */
-   // initialize new variable with array literal
-   var inReverse =[];
+   // initialize new variable with empty string
+   var inReverse = "";
    //create for loop to iterate through array
-   for (var i = input[i].length; i > 0; i--) {
-
+   for (var i = input.length - 1; i >= 0; i--) {
+    inReverse += input[i];
    }
-    
+    return inReverse;
     
     // YOUR CODE GOES ABOVE HERE //
 }
