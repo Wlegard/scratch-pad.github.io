@@ -22,11 +22,17 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     /*
-    I: function reverseStrinf with parameter input
+    I: function reverseString with parameter input
     O: return new string in reverse
     C: use for loop,access invidual characters, and concatenate strings
     E: N/A
     */
+   // initialize new variable with array literal
+   var inReverse =[];
+   //create for loop to iterate through array
+   for (var i = input[i].length; i > 0; i--) {
+
+   }
     
     
     // YOUR CODE GOES ABOVE HERE //
