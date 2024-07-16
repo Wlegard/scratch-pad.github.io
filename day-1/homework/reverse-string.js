@@ -31,8 +31,10 @@ function reverseString(input) {
    var inReverse = "";
    //create for loop to iterate through array
    for (var i = input.length - 1; i >= 0; i--) {
+    // concatenate inReverse with input at each index
     inReverse += input[i];
    }
+   // return new string
     return inReverse;
     
     // YOUR CODE GOES ABOVE HERE //
