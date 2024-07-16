@@ -79,11 +79,11 @@ function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 /*I: function length has one parameter named string
 O: return input string to using dash-case
-C: N/A
+C: use lowercase, split, and join method
 E: N/A
 */
-//return input string to using dash-case
-return string.
+//return input string using method split the words, then join with dash, then lowecase method
+return string.split(" ").join("-").toLowerCase();
 
 
 
@@ -105,8 +105,12 @@ return string.
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+/*I: function length has two parameter named string and char
+O: return true if the String begins with the character, false otherwise
+C:
+E: N/A
+*/
 
-    
 
     // YOUR CODE ABOVE HERE //
 }
@@ -138,8 +142,13 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    /*I: function length has two parameter named stringOne and stringTwo
+    O: return the strings concatenated into one
+    C:N/A
+    E: N/A
+    */
+   // return two concatenated into one using + operator
+return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -158,11 +167,17 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 
-
+     /*I: function length has two parameter named stringOne and stringTwo
+    O: return the strings all joined together
+    C:N/A
+    E: N/A
+    */
+   // return args joined without spaces
+return args.join("");
     // YOUR CODE ABOVE HERE //
 }
 
-/**
+/** 
  * Given two Strings, return the longest of the two.
  *
  * Example:
