@@ -140,12 +140,13 @@ function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
   /*
   I: function  getObjectLength has object as parameter
-  O: return array containing Object'skey/values pairs stored within object
+  O: return the number of key/value pairs stored within that Object.
   c:N/A
   E: N/A
   */
- // return array containing object keys/ value pairs
- return Object.entries(object);
+
+ // return number of  object keys/ value pairs in that object
+ return Object.entries(object).length
 
   
   
@@ -159,7 +160,9 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object){
+
+  }
   
   
   
