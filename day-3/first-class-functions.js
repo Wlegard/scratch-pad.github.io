@@ -96,7 +96,14 @@ function allStringsPass(strings, test) {
     
     // YOUR CODE ABOVE HERE //
 }
+/*var uppercase = modifyStrings(['alex', 'francis'], function(string){
+    return string.toUpperCase();
+}); // ['ALEX', 'FRANCIS]
 
+var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
+    return string + "!";
+}); // ['alex!', 'francis!']
+*/
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

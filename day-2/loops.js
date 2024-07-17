@@ -160,11 +160,12 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  for (var key in object){
+  
+  var reversedKeys = Object.keys(object).reverse();
 
-  }
-  
-  
+reversedKeys.forEach(key => {
+  console.log(object[key]);
+});
   
   // YOUR CODE ABOVE HERE //
 }
