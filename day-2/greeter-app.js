@@ -41,14 +41,22 @@ function greeter(hour) {
     C: Use if, else-if and else statement, test is case sensitive, use console.log ("Good Night!")
     E: N/A
     */
-
+// create if, else-if, else statement for hour
+// if hour is 0-11
     if (hour >= 0 && hour <= 11){
+        //print to the console Good Morning!
         console.log ("Good Morning!")
+        //else if hour is 12-16
     }else if (hour >= 12 && hour <= 16){
+        //print to the console Good Afternoon!
         console.log ("Good Afternoon!");
+        //else if hour is 12-21
         }else if (hour >= 17 && hour <= 21){
+        //print to the console Good Evening!
             console.log ("Good Evening!");
+            //else hour is 22-24
         }else {
+        //print to the console Good Night
             console.log( "Good Night!");
         }
     
