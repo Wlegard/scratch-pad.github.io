@@ -14,8 +14,8 @@ function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
 /* 
 I: function fizzBizz that prints 1 to 100
-O:
-C:
+O: multiples of three print “Fizz” instead of the number, multiples of five print “Buzz", multiples of both three and five print “FizzBuzz”.
+C:N/A
 E: N/A
 */
 
