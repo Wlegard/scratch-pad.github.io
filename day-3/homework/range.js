@@ -24,8 +24,17 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
+    /*
+    I: Create a function called range that takes two integers(start, end) as parameters
+    O: returns an Array containing all integers between the two parameters
+    C: use fr loop, use .push() method
+    E: N/A
+    */
+    for (var i = 0; i < start.length; i++){
+        if( ){
+        return
+        }
+    }
     
     // YOUR CODE GOES ABOVE HERE //
 }
