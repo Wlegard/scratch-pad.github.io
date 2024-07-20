@@ -57,11 +57,13 @@ function createStartsWithFilter(startsWith) {
     I:  function createStartsWithFilter has one parameter called startWith 
     O: return a Function that tests whether a given String starts with the startsWith character
     C: N/A
-   */    
+   */   
+    var startsWithUpper = startsWith.toUpperCase();
     return function(string){
-        return string.charAt(0) === startsWith;
-    }
-    
+
+  var stringUpper = string[0].toUpperCase();
+        return stringUpper === startsWithUpper;
+}
     
     
     // YOUR CODE ABOVE HERE //
@@ -79,10 +81,12 @@ function createEndsWithFilter(endsWith) {
     O: return a Function that tests whether a given String starts with the endsWith character
     C: N/A
    */    
+    var endsWithUpper = endsWith.toUpperCase();
     return function(string){
-        return string.charAt(string.length - 1) === endsWith;
-    }
-    
+
+  var stringUpper = string[string.length - 1].toUpperCase();
+        return stringUpper === endsWithUpper;
+}
     
     // YOUR CODE ABOVE HERE //
 }
@@ -96,9 +100,14 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    var modifiedStrings = [];
+
+    for (var i = 0; i < strings.length; i++) {
+        var modifiedThatString = modify(strings[i]);
+        modifiedStrings.push(modifiedThatString);
+
+    }
+    return modifiedStrings
     
     // YOUR CODE ABOVE HERE //
 }
@@ -117,19 +126,17 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
+    for (var i = 0; i < strings.length; i++) {
+        if (!test(strings[i])) {
+            return false; // If any string fails the test, return false
+        }
+    }
+    return true
     
     
     // YOUR CODE ABOVE HERE //
 }
-/*var uppercase = modifyStrings(['alex', 'francis'], function(string){
-    return string.toUpperCase();
-}); // ['ALEX', 'FRANCIS]
 
-var addedExclamation = modifyStrings(['alex', 'francis'], function(string){
-    return string + "!";
-}); // ['alex!', 'francis!']
-*/
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

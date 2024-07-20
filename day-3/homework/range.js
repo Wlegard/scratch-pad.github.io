@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { result } = require("lodash");
+
 /**
  * 3: range()
  *
@@ -30,11 +32,21 @@ function range(start, end) {
     C: use fr loop, use .push() method
     E: N/A
     */
-    for (var i = 0; i < start.length; i++){
-        if( ){
-        return
-        }
+   var output = [];
+   if ( start <= end){
+    for (var i = start; i <= end; i++){
+
+        output.push(i)
+       }
+    } else {
+    for (var i = start; i >= end; i--) {
+        output.push(i);
+    
+}
     }
+return output;
+
+    
     
     // YOUR CODE GOES ABOVE HERE //
 }
