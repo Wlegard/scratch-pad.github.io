@@ -130,7 +130,6 @@ function typeOf(value) {
     return "unknown";
     }
 
-    //(value instanceof Date)
 
     
     // YOUR CODE ABOVE HERE //
