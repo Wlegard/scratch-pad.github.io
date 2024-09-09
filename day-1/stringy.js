@@ -12,20 +12,19 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
-
+/**
+ * I: function takes in string as input
+ * O: return string's length
+ * C: none
+ * E:none
+ *
+ */
 
 
 function length(string) {
     // YOUR CODE BELOW HERE //
-/*I: function length has one parameter named string
-O: return input string's length
-C: force lowercase
-E: N/A
-*/
-// return the string's length
-return string.length;
 
-    
+return string.length;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -34,14 +33,14 @@ return string.length;
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
-    // YOUR CODE BELOW HERE //
-   
-/*I: function length has one parameter named string
-O: return input string in lower case
-C: N/A
-E: N/A
-*/
-// return string in lowecase
+      // YOUR CODE BELOW HERE //
+    /**
+ * I: function takes in string as input
+ * O: return string forced to lowercase
+ * C: none
+ * E:none
+ *
+ */
 return string.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
@@ -51,14 +50,15 @@ return string.toLowerCase();
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-/*I: function length has one parameter named string
-O: return input string to uppercase
-C: force uppercase
-E: N/A
-*/
-//retun using uppercase method
-return string.toUpperCase();
 
+  /**
+ * I: function takes in string as input
+ * O: return string forced to lowercase
+ * C: none
+ * E:none
+ *
+ */
+return string.toUpperCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -77,17 +77,16 @@ return string.toUpperCase();
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-/*I: function length has one parameter named string
-O: return input string to using dash-case
-C: use lowercase, split, and join method
-E: N/A
-*/
-//return input string using method split the words, then join with dash, then lowecase method
-return string.split(" ").join("-").toLowerCase();
 
+  /**
+ * I: function takes in string as input
+ * O: return string force to dash case
+ * C: none
+ * E:none
+ *
+ */
 
-
-
+return string.split(' ').join('-').toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -105,17 +104,19 @@ return string.split(" ").join("-").toLowerCase();
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-/*I: function length has two parameter named string and char
-O: return true if the String begins with the character, false otherwise
-C:  force uppercase on string first character and char
-E: N/A
-*/
-// create stringUpper and assign it to string at first index and force uppercase
-var stringUpper = string[0].toUpperCase();
-// create variable charUpper to force uppercase
-var charUpper = char.toUpperCase();
-// return stringUpper strictly compared to charUpper
-return stringUpper === charUpper;
+/**
+ * I: function takes in string and char as input
+ * O:  return true if the String
+ * begins with the character, false otherwise. The Function is case insensitive.
+ * C: none
+ * E:none
+ *
+ */
+// create two new variables to make string first letter uppercase and and char uppercase
+var string1 = string[0].toUpperCase();
+var char1 = char.toUpperCase();
+//return new string and new char strictly equal to equal true
+return string1 === char1;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -133,23 +134,19 @@ return stringUpper === charUpper;
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-/*I: function length has two parameter named string and char
-O: return true if the String ends with the character, false otherwise
-C:  force lowercase or uppercase on string last character and char
-E: N/A
-*/
+/**
+ * I: function takes in string and char as input
+ * O:  return true if the Stringends with the character, false otherwise. The Function is case insensitive.
+ * C: none
+ * E:none
+ *
+ */
 
-// create new variable for lastChar and assign it to string at last index with lowercase
-var lastChar = string[string.length - 1];
-// create new variable lowLastChar and assign to lastChar lowercase
-var lowLastChar = lastChar.toLowerCase();
-//create charLow variable and assign it to char to lowercse
-var charLow = char.toLowerCase();
-// return lowLastChar strictly compared to charLw
-return lowLastChar === charLow;
-
-
-
+// create two new variables to make string last letter uppercase and and char uppercase
+var string2 = string[string.length - 1].toUpperCase();
+var char2 = char.toUpperCase();
+//return new string and new char strictly equal to equal true
+return string2 === char2;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -160,14 +157,14 @@ return lowLastChar === charLow;
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    /*I: function length has two parameter named stringOne and stringTwo
-    O: return the strings concatenated into one
-    C: plus operator
-    E: N/A
-    */
-   // return two concatenated into one using + operator
+   /**
+ * I: function takes in stringOne and stringTwo as input
+ * O:  return the Strings concatenated into one
+ * C: none
+ * E:none
+ *
+ */
 return stringOne + stringTwo;
-
     // YOUR CODE ABOVE HERE //
 }
 
@@ -184,14 +181,9 @@ return stringOne + stringTwo;
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-     /*I: function length has two parameter named stringOne and stringTwo
-    O: return the strings all joined together
-    C: use join method
-    E: N/A
-    */
-   // return args joined without spaces
-return args.join("");
+    // return variable args joined together
+return args.join('');
+     
     // YOUR CODE ABOVE HERE //
 }
 
@@ -206,22 +198,15 @@ return args.join("");
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-/*I: function length has two parameters named stringOne and stringTwo
-    O: return the longest string
-    C: compare the length two strings
-    E: N/A
-    */
-   //create if statement comparing the lenght of stringOne and the length od stringTwo
-    if (stringOne.length >= stringTwo.length) {
-        // return stringOne if it's longer
-        return stringOne;
-      } else {
-     // return stringTwo if it's longer
-        return stringTwo;
-      }
-    
-    
+    // if string stringOne is longer
+if (stringOne.length > stringTwo.length){
+    //return stringOne
+    return stringOne;
+//stringTwo is longer 
+}else{
+    //return stringTwo
+    return stringTwo;
+}
    
     
 
@@ -236,23 +221,29 @@ function longest(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 
+ /**
+ * I: function takes in stringOne and stringTwo as input
+ * O: return 1 if the first is higher in alphabetical order than
+ * the second, return -1 if the second is higher in alphabetical order than the
+ * first, and return 0 if they're equal.
+ * C: use comparison operator
+ * E:none
+ *
+ */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    /*I: function length has two parameters named stringOne and stringTwo
-    O:  return 1 if the first is higher in alphabetical order, return -1 if the second is higher, return 0 if equal.
-    C: compare strings using  greater than or less than operators
-    E: N/A
-    */
-   // create else if statement comparing stringOne and StringTwo
-if (stringOne > stringTwo){
-    // return -1 if stringOne is greater
-    return -1;
-} else if (stringOne < stringTwo){
-    //return 1 if string two is greater
+      // if string stringTwo is higher
+if (stringTwo > stringOne){
+    //return 1
     return 1;
-} else{
-    //return 0 if both strings are equal
-return 0;
+// if stringOne is highe 
+} else if(stringTwo < stringOne){
+    //return -1
+    return -1;
+    //if stringOne and stringTo are equal 
+}else{
+    //return 0
+    return 0;
 }
     // YOUR CODE ABOVE HERE //
 }
@@ -265,26 +256,31 @@ return 0;
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/**
+ * I: function takes in stringOne and stringTwo as input
+ * O: return 1 if the first is lower in alphabetical order than
+ * the second, return -1 if the second is lower in alphabetical order than the
+ * first, and return 0 if they're equal.
+ * C: use comparison operator
+ * E:none
+ *
+ */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
- /*I: function length has two parameters named stringOne and stringTwo
-    O:  return 1 if the first is lower in alphabetical order, return -1 if the second is lower, return 0 if equal.
-    C: compare strings using  greater than or less than operators
-    E: N/A
-    */
-   // create else if statement comparing stringOne and StringTwo
-   if (stringOne < stringTwo){
-    // return -1 if stringOne is lower
-    return -1;
-} else if (stringOne > stringTwo){
-    //return 1 if string two is great lower
-    return 1;
-} else{
-    //return 0 if both strings are equal
-return 0
-}
 
-
+   //if stringOne is higher
+    if (stringTwo < stringOne){
+        //return 1
+        return 1;
+    //if stringTwo is higher 
+    } else if(stringTwo > stringOne){
+        //return -1
+        return -1;
+    }else{
+        //stringOne and stringTwo are eqaul
+        return 0;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
