@@ -15,12 +15,18 @@
 
 
 
-
 function length(string) {
     // YOUR CODE BELOW HERE //
+/*I: function length has one parameter named string
+O: return input string's length
+C: force lowercase
+E: N/A
+*/
+// return the string's length
+return string.length;
 
-   
     
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -30,7 +36,13 @@ function length(string) {
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
    
-
+/*I: function length has one parameter named string
+O: return input string in lower case
+C: N/A
+E: N/A
+*/
+// return string in lowecase
+return string.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -39,8 +51,13 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+/*I: function length has one parameter named string
+O: return input string to uppercase
+C: force uppercase
+E: N/A
+*/
+//retun using uppercase method
+return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -60,6 +77,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+/*I: function length has one parameter named string
+O: return input string to using dash-case
+C: use lowercase, split, and join method
+E: N/A
+*/
+//return input string using method split the words, then join with dash, then lowecase method
+return string.split(" ").join("-").toLowerCase();
+
 
 
 
@@ -80,9 +105,17 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
-
+/*I: function length has two parameter named string and char
+O: return true if the String begins with the character, false otherwise
+C:  force uppercase on string first character and char
+E: N/A
+*/
+// create stringUpper and assign it to string at first index and force uppercase
+var stringUpper = string[0].toUpperCase();
+// create variable charUpper to force uppercase
+var charUpper = char.toUpperCase();
+// return stringUpper strictly compared to charUpper
+return stringUpper === charUpper;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -100,6 +133,20 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
+/*I: function length has two parameter named string and char
+O: return true if the String ends with the character, false otherwise
+C:  force lowercase or uppercase on string last character and char
+E: N/A
+*/
+
+// create new variable for lastChar and assign it to string at last index with lowercase
+var lastChar = string[string.length - 1];
+// create new variable lowLastChar and assign to lastChar lowercase
+var lowLastChar = lastChar.toLowerCase();
+//create charLow variable and assign it to char to lowercse
+var charLow = char.toLowerCase();
+// return lowLastChar strictly compared to charLw
+return lowLastChar === charLow;
 
 
 
@@ -113,8 +160,13 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    /*I: function length has two parameter named stringOne and stringTwo
+    O: return the strings concatenated into one
+    C: plus operator
+    E: N/A
+    */
+   // return two concatenated into one using + operator
+return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -133,11 +185,17 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 
-
+     /*I: function length has two parameter named stringOne and stringTwo
+    O: return the strings all joined together
+    C: use join method
+    E: N/A
+    */
+   // return args joined without spaces
+return args.join("");
     // YOUR CODE ABOVE HERE //
 }
 
-/**
+/** 
  * Given two Strings, return the longest of the two.
  *
  * Example:
@@ -149,7 +207,23 @@ function join(stringOne, stringTwo) {
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
+/*I: function length has two parameters named stringOne and stringTwo
+    O: return the longest string
+    C: compare the length two strings
+    E: N/A
+    */
+   //create if statement comparing the lenght of stringOne and the length od stringTwo
+    if (stringOne.length >= stringTwo.length) {
+        // return stringOne if it's longer
+        return stringOne;
+      } else {
+     // return stringTwo if it's longer
+        return stringTwo;
+      }
+    
+    
+   
+    
 
     // YOUR CODE ABOVE HERE //
 }
@@ -161,11 +235,25 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+    /*I: function length has two parameters named stringOne and stringTwo
+    O:  return 1 if the first is higher in alphabetical order, return -1 if the second is higher, return 0 if equal.
+    C: compare strings using  greater than or less than operators
+    E: N/A
+    */
+   // create else if statement comparing stringOne and StringTwo
+if (stringOne > stringTwo){
+    // return -1 if stringOne is greater
+    return -1;
+} else if (stringOne < stringTwo){
+    //return 1 if string two is greater
+    return 1;
+} else{
+    //return 0 if both strings are equal
+return 0;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -179,7 +267,22 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+ /*I: function length has two parameters named stringOne and stringTwo
+    O:  return 1 if the first is lower in alphabetical order, return -1 if the second is lower, return 0 if equal.
+    C: compare strings using  greater than or less than operators
+    E: N/A
+    */
+   // create else if statement comparing stringOne and StringTwo
+   if (stringOne < stringTwo){
+    // return -1 if stringOne is lower
+    return -1;
+} else if (stringOne > stringTwo){
+    //return 1 if string two is great lower
+    return 1;
+} else{
+    //return 0 if both strings are equal
+return 0
+}
 
 
 
